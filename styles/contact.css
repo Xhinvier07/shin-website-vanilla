@@ -1,0 +1,936 @@
+/* ============================================
+   CONTACT PAGE STYLES
+   Based on ConnectSection.jsx design
+   ============================================ */
+   body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('../public/grain.jpg');
+    background-repeat: repeat;
+    background-size: 150px 150px;
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: 0;
+  }
+/* ============================================
+   CONTACT SECTION
+   ============================================ */
+.contact-section {
+    min-height: 100vh;
+    padding: 8rem 2rem 4rem;
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.contact-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    animation: shimmer 3s linear infinite;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--highlight) 50%, var(--accent) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    font-family: var(--font-primary);
+    margin-bottom: 3rem;
+}
+
+.gradient-text-contact {
+    background: linear-gradient(135deg, var(--highlight), var(--accent), var(--secondary), var(--highlight));
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shimmer 3s linear infinite;
+    display: inline-block;
+}
+
+/* ============================================
+   BENTO CONTAINER
+   ============================================ */
+.bento-container {
+    position: relative;
+    background: rgba(17, 17, 17, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+}
+
+.bento-grain {
+    position: absolute;
+    inset: 0;
+    background-image: url('../public/grain.jpg');
+    background-size: 150px;
+    background-repeat: repeat;
+    opacity: 0.1;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 0;
+    border-radius: 20px;
+}
+
+/* ============================================
+   BENTO GRID
+   ============================================ */
+.bento-grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+/* ============================================
+   BENTO CARDS - BASE
+   ============================================ */
+.bento-card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(26, 26, 46, 1), rgba(22, 33, 62, 1));
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.bento-card:hover {
+    border-color: rgba(51, 161, 224, 0.5);
+    box-shadow: 0 10px 30px rgba(51, 161, 224, 0.2);
+}
+
+.card-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* ============================================
+   CONTACT FORM CARD
+   ============================================ */
+.contact-form-card {
+    grid-row: span 2;
+}
+
+.card-glow {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(51, 161, 224, 0.05), transparent, rgba(255, 249, 175, 0.05));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.contact-form-card:hover .card-glow {
+    opacity: 1;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.icon-wrapper {
+    padding: 0.5rem;
+    background: rgba(51, 161, 224, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-wrapper svg {
+    stroke: var(--accent);
+}
+
+.card-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+}
+
+.card-description {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   CONTACT FORM
+   ============================================ */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 0.875rem;
+    font-family: var(--font-body);
+    transition: all 0.2s ease;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    border-color: rgba(128, 128, 128, 0.6);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(51, 161, 224, 0.2);
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--accent), var(--highlight));
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.875rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-family: var(--font-primary);
+    margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(51, 161, 224, 0.25);
+}
+
+.submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
+.submit-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover svg {
+    transform: translateX(3px);
+}
+
+/* ============================================
+   RIGHT SIDE LAYOUT
+   ============================================ */
+.bento-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+/* ============================================
+   GITHUB CARD
+   ============================================ */
+.github-card {
+    grid-column: span 2;
+    background: linear-gradient(135deg, rgba(26, 26, 46, 1), rgba(13, 17, 23, 1));
+}
+
+.github-card:hover {
+    border-color: rgba(34, 197, 94, 0.5);
+    box-shadow: 0 10px 30px rgba(34, 197, 94, 0.2);
+}
+
+.github-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+}
+
+.pattern-circle {
+    position: absolute;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    border-radius: 50%;
+}
+
+.pattern-1 {
+    top: 1rem;
+    right: 1rem;
+    width: 80px;
+    height: 80px;
+}
+
+.pattern-2 {
+    bottom: 1rem;
+    left: 1rem;
+    width: 64px;
+    height: 64px;
+}
+
+/* GitHub Contributions Styles */
+#githubContributions {
+    width: 100%;
+}
+
+.github-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.github-icon {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+.github-header h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+}
+
+.contributions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10px, 1fr));
+    gap: 3px;
+    margin-bottom: 0.75rem;
+}
+
+.contribution-day {
+    aspect-ratio: 1;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+}
+
+.contribution-day.level-1 { background: rgba(34, 197, 94, 0.2); }
+.contribution-day.level-2 { background: rgba(34, 197, 94, 0.4); }
+.contribution-day.level-3 { background: rgba(34, 197, 94, 0.6); }
+.contribution-day.level-4 { background: rgba(34, 197, 94, 0.8); }
+
+.contribution-day:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
+}
+
+.github-footer {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+/* ============================================
+   STATS CARD
+   ============================================ */
+.stats-card {
+    background: linear-gradient(135deg, rgba(51, 161, 224, 0.2), rgba(255, 249, 175, 0.2));
+    border-color: rgba(51, 161, 224, 0.3);
+}
+
+.stats-card:hover {
+    transform: scale(1.02);
+}
+
+.stats-bg {
+    position: absolute;
+    inset: 0;
+}
+
+.stats-orb {
+    position: absolute;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.orb-1 {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 32px;
+    height: 32px;
+    background: rgba(51, 161, 224, 0.1);
+}
+
+.orb-2 {
+    bottom: 0.5rem;
+    left: 0.5rem;
+    width: 24px;
+    height: 24px;
+    background: rgba(255, 249, 175, 0.1);
+    animation-delay: 0.3s;
+}
+
+.stats-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(51, 161, 224, 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.stats-card:hover .stats-gradient {
+    opacity: 1;
+}
+
+.star-icon {
+    fill: #FFC107;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: white;
+}
+
+.stat-value {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.stat-projects {
+    color: var(--accent);
+}
+
+.stat-years {
+    color: var(--highlight);
+}
+
+.email-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--accent), var(--highlight));
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-family: var(--font-primary);
+}
+
+.email-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(51, 161, 224, 0.25);
+}
+
+.email-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.email-btn:hover svg {
+    transform: scale(1.1);
+}
+
+/* ============================================
+   QUOTE CARD
+   ============================================ */
+.quote-card {
+    background: linear-gradient(135deg, #FFFBEB, #FEF3C7, #FDE68A);
+    border: 2px solid #000;
+    color: #000;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.quote-card:hover {
+    box-shadow: 0 15px 40px rgba(251, 191, 36, 0.5);
+}
+
+.quote-flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.quote-card.flipped .quote-flipper {
+    transform: rotateY(180deg);
+}
+
+.quote-front,
+.quote-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.quote-back {
+    transform: rotateY(180deg);
+}
+
+/* Quote Front */
+.quote-pattern {
+    position: absolute;
+    inset: 0;
+}
+
+.pattern-ring {
+    position: absolute;
+    border: 2px solid rgba(251, 191, 36, 0.3);
+    border-radius: 50%;
+}
+
+.pattern-ring.pattern-1 {
+    top: 1rem;
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.pattern-ring.pattern-2 {
+    bottom: 1rem;
+    left: 1rem;
+    width: 32px;
+    height: 32px;
+}
+
+.pattern-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+    border-radius: 50%;
+}
+
+.dot-1 {
+    top: 0.75rem;
+    right: 0.75rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.dot-2 {
+    bottom: 0.75rem;
+    left: 0.75rem;
+    border: 2px solid rgba(251, 191, 36, 0.5);
+    background: transparent;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.quote-content-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.quote-icon-wrapper {
+    padding: 1rem;
+    background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quote-card:hover .quote-icon-wrapper {
+    transform: scale(1.1);
+}
+
+.quote-icon-wrapper svg {
+    stroke: #92400E;
+}
+
+.quote-content-front h3 {
+    font-size: 1.25rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #D97706, #B45309);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.quote-content-front p {
+    font-size: 0.875rem;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+}
+
+/* Quote Back */
+.quote-marks {
+    position: absolute;
+    inset: 0;
+    font-family: serif;
+    color: rgba(251, 191, 36, 0.4);
+}
+
+.quote-mark-left {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 3rem;
+    transform: rotate(-12deg);
+}
+
+.quote-mark-right {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    font-size: 3rem;
+    transform: rotate(12deg);
+}
+
+.quote-content-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.quote-icon-small {
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.quote-icon-small svg {
+    stroke: #92400E;
+}
+
+blockquote {
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.9);
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+}
+
+cite {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #92400E;
+    background: rgba(254, 243, 199, 0.5);
+    border-radius: 50px;
+    padding: 0.25rem 0.75rem;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+.quote-hint {
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 50px;
+    padding: 0.25rem 0.75rem;
+}
+
+.quote-ping {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.ping-1 {
+    top: 25%;
+    right: 1rem;
+    background: #F59E0B;
+}
+
+.ping-2 {
+    bottom: 25%;
+    left: 1rem;
+    background: #D97706;
+    animation-delay: 0.5s;
+}
+
+@keyframes ping {
+    75%, 100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.quote-shimmer {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+    pointer-events: none;
+}
+
+.quote-card:hover .quote-shimmer {
+    transform: translateX(100%);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .contact-form-card {
+        grid-column: span 2;
+        grid-row: auto;
+    }
+    
+    .bento-right {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 6rem 1.5rem 3rem;
+    }
+    
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bento-right {
+        grid-template-columns: 1fr;
+    }
+    
+    .github-card {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-section {
+        padding: 5rem 1rem 2rem;
+    }
+    
+    .bento-container {
+        padding: 1rem;
+    }
+    
+    .bento-card {
+        padding: 1.25rem;
+    }
+    
+    .contact-form-card {
+        padding: 1.5rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .form-input,
+    .form-textarea {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .form-label {
+        font-size: 0.9rem;
+    }
+    
+    .submit-btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .github-card {
+        padding: 1.5rem;
+    }
+    
+    .github-title {
+        font-size: 1.125rem;
+    }
+    
+    .github-grid {
+        gap: 0.25rem;
+    }
+    
+    .github-day {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .stats-card {
+        padding: 1.5rem;
+    }
+    
+    .stats-grid {
+        gap: 1rem;
+    }
+    
+    .stat-item {
+        text-align: center;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .quote-card {
+        padding: 1.5rem;
+    }
+    
+    .quote-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .quote-author {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 4rem 0.75rem 1.5rem;
+    }
+    
+    .bento-container {
+        padding: 0.75rem;
+    }
+    
+    .bento-card {
+        padding: 1rem;
+    }
+    
+    .contact-form-card {
+        padding: 1.25rem;
+    }
+    
+    .form-input,
+    .form-textarea {
+        padding: 0.625rem;
+        font-size: 0.85rem;
+    }
+    
+    .form-label {
+        font-size: 0.85rem;
+    }
+    
+    .submit-btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.85rem;
+    }
+    
+    .github-card {
+        padding: 1.25rem;
+    }
+    
+    .github-title {
+        font-size: 1rem;
+    }
+    
+    .github-day {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .stats-card {
+        padding: 1.25rem;
+    }
+    
+    .stat-number {
+        font-size: 1.25rem;
+    }
+    
+    .stat-label {
+        font-size: 0.75rem;
+    }
+    
+    .quote-card {
+        padding: 1.25rem;
+    }
+    
+    .quote-text {
+        font-size: 0.85rem;
+    }
+    
+    .quote-author {
+        font-size: 0.75rem;
+    }
+}
+

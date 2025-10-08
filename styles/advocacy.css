@@ -1,0 +1,726 @@
+/* ============================================
+   ADVOCACY PAGE STYLES
+   Creative SDG-focused design
+   ============================================ */
+
+
+   body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('../public/grain.jpg');
+    background-repeat: repeat;
+    background-size: 150px 150px;
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.advocacy-hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 4rem;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 50%, rgba(21, 77, 113, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.hero-content {
+    max-width: 900px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(33, 150, 243, 0.1));
+    border: 1px solid rgba(76, 175, 80, 0.4);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4CAF50;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fade-in-up 0.8s ease-out 0.2s forwards;
+}
+
+.hero-badge svg {
+    width: 20px;
+    height: 20px;
+    stroke: #4CAF50;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    opacity: 0;
+    animation: fade-in-up 0.8s ease-out 0.4s forwards;
+}
+
+.gradient-text-advocacy {
+    background: linear-gradient(135deg, #4CAF50, #2196F3, #00BCD4);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-flow 5s linear infinite;
+    display: inline-block;
+}
+
+@keyframes gradient-flow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+.hero-description {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 750px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fade-in-up 0.8s ease-out 0.6s forwards;
+}
+
+/* ============================================
+   ANIMATED GLOBE
+   ============================================ */
+.globe-container {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.globe {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(33, 150, 243, 0.3), rgba(76, 175, 80, 0.1));
+    animation: globe-rotate 20s linear infinite;
+    box-shadow: 0 0 60px rgba(33, 150, 243, 0.3);
+}
+
+@keyframes globe-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.globe-rings {
+    position: absolute;
+    inset: 0;
+}
+
+.ring {
+    position: absolute;
+    border: 2px solid rgba(33, 150, 243, 0.2);
+    border-radius: 50%;
+}
+
+.ring-1 {
+    inset: -20px;
+    animation: ring-pulse 3s ease-in-out infinite;
+}
+
+.ring-2 {
+    inset: -40px;
+    animation: ring-pulse 3s ease-in-out 1s infinite;
+}
+
+.ring-3 {
+    inset: -60px;
+    animation: ring-pulse 3s ease-in-out 2s infinite;
+}
+
+@keyframes ring-pulse {
+    0%, 100% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+}
+
+/* ============================================
+   SDG OVERVIEW SECTION
+   ============================================ */
+.sdg-overview {
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(21, 77, 113, 0.05) 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    background: linear-gradient(135deg, #4CAF50, #2196F3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   SDG GRID
+   ============================================ */
+.sdg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+}
+
+.sdg-card {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.sdg-card.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.sdg-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.sdg-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.sdg-card:hover img {
+    transform: scale(1.1);
+}
+
+.sdg-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sdg-card:hover .sdg-overlay {
+    opacity: 1;
+}
+
+.sdg-number {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: white;
+}
+
+/* ============================================
+   ADVOCACY AREAS
+   ============================================ */
+.advocacy-areas {
+    padding: 6rem 2rem;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.advocacy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.advocacy-card {
+    position: relative;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 24px;
+    padding: 2.5rem;
+    border: 2px solid rgba(76, 175, 80, 0.2);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.advocacy-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.advocacy-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, transparent, var(--advocacy-color), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.advocacy-card:hover::before {
+    opacity: 1;
+}
+
+.advocacy-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border-color: var(--advocacy-color);
+}
+
+.advocacy-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--advocacy-color), rgba(76, 175, 80, 0.5));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.advocacy-card:hover .advocacy-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.advocacy-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.advocacy-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.advocacy-sdgs {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.advocacy-sdg-badge {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.advocacy-sdg-badge:hover {
+    transform: scale(1.15) rotate(5deg);
+    border-color: var(--advocacy-color);
+}
+
+.advocacy-sdg-badge img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.advocacy-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.action-tag {
+    padding: 0.5rem 1rem;
+    background: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: #4CAF50;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.advocacy-card:hover .action-tag {
+    background: rgba(76, 175, 80, 0.2);
+    border-color: var(--advocacy-color);
+}
+
+/* ============================================
+   IMPACT STATS
+   ============================================ */
+.impact-stats {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(33, 150, 243, 0.1));
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    border: 2px solid rgba(76, 175, 80, 0.2);
+    transition: all 0.4s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    border-color: #4CAF50;
+    box-shadow: 0 15px 40px rgba(76, 175, 80, 0.3);
+}
+
+.stat-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: icon-bounce 2s ease-in-out infinite;
+}
+
+.stat-number {
+    font-size: 4rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #4CAF50, #2196F3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+/* ============================================
+   MISSION STATEMENT
+   ============================================ */
+.mission-statement {
+    padding: 6rem 2rem;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.mission-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mission-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(33, 150, 243, 0.2));
+    border: 2px solid rgba(76, 175, 80, 0.4);
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+.mission-icon svg {
+    stroke: #4CAF50;
+}
+
+.mission-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #4CAF50, #2196F3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mission-text {
+    margin-bottom: 3rem;
+}
+
+.mission-text p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.mission-text em {
+    color: #4CAF50;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.mission-cta {
+    display: flex;
+    justify-content: center;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #4CAF50, #2196F3);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(76, 175, 80, 0.5);
+}
+
+.cta-button svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover svg {
+    transform: translateX(5px);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+    .globe-container {
+        opacity: 0.2;
+        right: 5%;
+    }
+    
+    .globe {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .advocacy-hero {
+        padding: 6rem 1.5rem 3rem;
+    }
+    
+    .globe-container {
+        display: none;
+    }
+    
+    .sdg-overview,
+    .projects-by-sdg,
+    .impact-stats,
+    .mission-statement {
+        padding: 4rem 1.5rem;
+    }
+    
+    .sdg-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1rem;
+    }
+    
+    .project-card {
+        padding: 2rem;
+    }
+    
+    .project-title {
+        font-size: 1.5rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .advocacy-hero {
+        padding: 5rem 1rem 2rem;
+    }
+    
+    .sdg-overview,
+    .projects-by-sdg,
+    .impact-stats,
+    .mission-statement {
+        padding: 3rem 1rem;
+    }
+    
+    .sdg-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .sdg-card {
+        padding: 1rem;
+    }
+    
+    .sdg-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    
+    .sdg-number {
+        font-size: 0.8rem;
+    }
+    
+    .advocacy-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .advocacy-card {
+        padding: 1.5rem;
+    }
+    
+    .advocacy-title {
+        font-size: 1.25rem;
+    }
+    
+    .advocacy-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .stat-card {
+        padding: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .stat-label {
+        font-size: 0.9rem;
+    }
+    
+    .mission-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .cta-button {
+        padding: 0.875rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .advocacy-hero {
+        padding: 4rem 0.75rem 1.5rem;
+    }
+    
+    .sdg-overview,
+    .projects-by-sdg,
+    .impact-stats,
+    .mission-statement {
+        padding: 2rem 0.75rem;
+    }
+    
+    .sdg-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .sdg-card {
+        padding: 0.75rem;
+    }
+    
+    .sdg-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1.25rem;
+    }
+    
+    .sdg-number {
+        font-size: 0.75rem;
+    }
+    
+    .advocacy-card {
+        padding: 1.25rem;
+    }
+    
+    .advocacy-title {
+        font-size: 1.125rem;
+    }
+    
+    .advocacy-description {
+        font-size: 0.85rem;
+    }
+    
+    .stat-card {
+        padding: 1.25rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.85rem;
+    }
+    
+    .mission-text {
+        font-size: 0.9rem;
+    }
+    
+    .cta-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+

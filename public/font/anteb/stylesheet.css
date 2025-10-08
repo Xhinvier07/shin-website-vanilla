@@ -1,0 +1,240 @@
+@font-face {
+    font-family: 'Anteb Extra';
+    src: url('Anteb-ExtraBold.eot');
+    src: local('Anteb Extra Bold'), local('Anteb-ExtraBold'),
+        url('Anteb-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-ExtraBold.woff2') format('woff2'),
+        url('Anteb-ExtraBold.woff') format('woff'),
+        url('Anteb-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anteb Extra';
+    src: url('Anteb-ExtraBlackItalic.eot');
+    src: local('Anteb Extra Black Italic'), local('Anteb-ExtraBlackItalic'),
+        url('Anteb-ExtraBlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-ExtraBlackItalic.woff2') format('woff2'),
+        url('Anteb-ExtraBlackItalic.woff') format('woff'),
+        url('Anteb-ExtraBlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Anteb Extra';
+    src: url('Anteb-ExtraBlack.eot');
+    src: local('Anteb Extra Black'), local('Anteb-ExtraBlack'),
+        url('Anteb-ExtraBlack.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-ExtraBlack.woff2') format('woff2'),
+        url('Anteb-ExtraBlack.woff') format('woff'),
+        url('Anteb-ExtraBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anteb';
+    src: url('Anteb-Bold.eot');
+    src: local('Anteb Bold'), local('Anteb-Bold'),
+        url('Anteb-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-Bold.woff2') format('woff2'),
+        url('Anteb-Bold.woff') format('woff'),
+        url('Anteb-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anteb Extra';
+    src: url('Anteb-ExtraBoldItalic.eot');
+    src: local('Anteb Extra Bold Italic'), local('Anteb-ExtraBoldItalic'),
+        url('Anteb-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-ExtraBoldItalic.woff2') format('woff2'),
+        url('Anteb-ExtraBoldItalic.woff') format('woff'),
+        url('Anteb-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Anteb';
+    src: url('Anteb-Black.eot');
+    src: local('Anteb Black'), local('Anteb-Black'),
+        url('Anteb-Black.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-Black.woff2') format('woff2'),
+        url('Anteb-Black.woff') format('woff'),
+        url('Anteb-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anteb';
+    src: url('Anteb-BlackItalic.eot');
+    src: local('Anteb Black Italic'), local('Anteb-BlackItalic'),
+        url('Anteb-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-BlackItalic.woff2') format('woff2'),
+        url('Anteb-BlackItalic.woff') format('woff'),
+        url('Anteb-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Anteb';
+    src: url('Anteb-BoldItalic.eot');
+    src: local('Anteb Bold Italic'), local('Anteb-BoldItalic'),
+        url('Anteb-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-BoldItalic.woff2') format('woff2'),
+        url('Anteb-BoldItalic.woff') format('woff'),
+        url('Anteb-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Anteb';
+    src: url('Anteb-MediumItalic.eot');
+    src: local('Anteb Medium Italic'), local('Anteb-MediumItalic'),
+        url('Anteb-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-MediumItalic.woff2') format('woff2'),
+        url('Anteb-MediumItalic.woff') format('woff'),
+        url('Anteb-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Anteb';
+    src: url('Anteb-LightItalic.eot');
+    src: local('Anteb Light Italic'), local('Anteb-LightItalic'),
+        url('Anteb-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-LightItalic.woff2') format('woff2'),
+        url('Anteb-LightItalic.woff') format('woff'),
+        url('Anteb-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Anteb';
+    src: url('Anteb-Regular.eot');
+    src: local('Anteb'), local('Anteb-Regular'),
+        url('Anteb-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-Regular.woff2') format('woff2'),
+        url('Anteb-Regular.woff') format('woff'),
+        url('Anteb-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anteb Semi';
+    src: url('Anteb-SemiLightItalic.eot');
+    src: local('Anteb Semi Light Italic'), local('Anteb-SemiLightItalic'),
+        url('Anteb-SemiLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-SemiLightItalic.woff2') format('woff2'),
+        url('Anteb-SemiLightItalic.woff') format('woff'),
+        url('Anteb-SemiLightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Anteb';
+    src: url('Anteb-Medium.eot');
+    src: local('Anteb Medium'), local('Anteb-Medium'),
+        url('Anteb-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-Medium.woff2') format('woff2'),
+        url('Anteb-Medium.woff') format('woff'),
+        url('Anteb-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anteb';
+    src: url('Anteb-ThinItalic.eot');
+    src: local('Anteb Thin Italic'), local('Anteb-ThinItalic'),
+        url('Anteb-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-ThinItalic.woff2') format('woff2'),
+        url('Anteb-ThinItalic.woff') format('woff'),
+        url('Anteb-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Anteb Extra';
+    src: url('Anteb-ExtraLight.eot');
+    src: local('Anteb Extra Light'), local('Anteb-ExtraLight'),
+        url('Anteb-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-ExtraLight.woff2') format('woff2'),
+        url('Anteb-ExtraLight.woff') format('woff'),
+        url('Anteb-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anteb Semi';
+    src: url('Anteb-SemiLight.eot');
+    src: local('Anteb Semi Light'), local('Anteb-SemiLight'),
+        url('Anteb-SemiLight.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-SemiLight.woff2') format('woff2'),
+        url('Anteb-SemiLight.woff') format('woff'),
+        url('Anteb-SemiLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anteb Extra';
+    src: url('Anteb-ExtraLightItalic.eot');
+    src: local('Anteb Extra Light Italic'), local('Anteb-ExtraLightItalic'),
+        url('Anteb-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-ExtraLightItalic.woff2') format('woff2'),
+        url('Anteb-ExtraLightItalic.woff') format('woff'),
+        url('Anteb-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Anteb';
+    src: url('Anteb-Light.eot');
+    src: local('Anteb Light'), local('Anteb-Light'),
+        url('Anteb-Light.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-Light.woff2') format('woff2'),
+        url('Anteb-Light.woff') format('woff'),
+        url('Anteb-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anteb';
+    src: url('Anteb-Italic.eot');
+    src: local('Anteb Italic'), local('Anteb-Italic'),
+        url('Anteb-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-Italic.woff2') format('woff2'),
+        url('Anteb-Italic.woff') format('woff'),
+        url('Anteb-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Anteb';
+    src: url('Anteb-Thin.eot');
+    src: local('Anteb Thin'), local('Anteb-Thin'),
+        url('Anteb-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Anteb-Thin.woff2') format('woff2'),
+        url('Anteb-Thin.woff') format('woff'),
+        url('Anteb-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+

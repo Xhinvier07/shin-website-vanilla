@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Xhinvier - Software Engineer, Full Stack Developer">
+    <meta name="author" content="Jansen Moral">
+    <title>About Me | Xhinvier</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../styles/main.css"> 
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/about.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../public/shinlogo.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo - Left Side -->
+            <div class="logo-container">
+                <div class="logo-wrapper">
+                    <a href="../index.html">
+                        <img src="../public/shinlogo.png" alt="Shin Logo" class="logo-image">
+                        <div class="logo-shine"></div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Items - Right Side -->
+            <ul class="nav-menu" id="navMenu">
+                <li class="navbar-item">
+                    <a href="../index.html" class="nav-link">
+                        <span class="text-gradient-hover">HOME</span>
+                        <div class="nav-border"></div>
+                        <div class="nav-particles">
+                            <div class="particle particle-1"></div>
+                            <div class="particle particle-2"></div>
+                            <div class="particle particle-3"></div>
+                        </div>
+                    </a>
+                </li>
+                
+                <!-- About Me with Dropdown -->
+                <li class="navbar-item has-dropdown">
+                    <a href="about.html" class="nav-link active">
+                        <span class="text-gradient-hover">ABOUT ME</span>
+                        <svg class="dropdown-arrow" viewBox="0 0 12 8" fill="none">
+                            <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <div class="nav-border"></div>
+                        <div class="nav-particles">
+                            <div class="particle particle-1"></div>
+                            <div class="particle particle-2"></div>
+                            <div class="particle particle-3"></div>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="education.html" class="dropdown-item">Education</a></li>
+                        <li><a href="experience.html" class="dropdown-item">Experience</a></li>
+                        <li><a href="skills.html" class="dropdown-item">Skills</a></li>
+                    </ul>
+                </li>
+                
+                <!-- Achievements with Dropdown -->
+                <li class="navbar-item has-dropdown">
+                    <a href="achievements.html" class="nav-link">
+                        <span class="text-gradient-hover">ACHIEVEMENTS</span>
+                        <svg class="dropdown-arrow" viewBox="0 0 12 8" fill="none">
+                            <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <div class="nav-border"></div>
+                        <div class="nav-particles">
+                            <div class="particle particle-1"></div>
+                            <div class="particle particle-2"></div>
+                            <div class="particle particle-3"></div>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="certifications.html" class="dropdown-item">Certifications & Training</a></li>
+                        <li><a href="advocacy.html" class="dropdown-item">Advocacy</a></li>
+                    </ul>
+                </li>
+                
+                <li class="navbar-item">
+                    <a href="portfolio.html" class="nav-link">
+                        <span class="text-gradient-hover">PORTFOLIO</span>
+                        <div class="nav-border"></div>
+                        <div class="nav-particles">
+                            <div class="particle particle-1"></div>
+                            <div class="particle particle-2"></div>
+                            <div class="particle particle-3"></div>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="navbar-item">
+                    <a href="contact.html" class="nav-link">
+                        <span class="text-gradient-hover">CONTACT</span>
+                        <div class="nav-border"></div>
+                        <div class="nav-particles">
+                            <div class="particle particle-1"></div>
+                            <div class="particle particle-2"></div>
+                            <div class="particle particle-3"></div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <svg class="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content about-page">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="about-hero-content">
+                <div class="hero-badge animate-on-scroll">
+                    <span class="badge-dot"></span>
+                    <span>Available for opportunities</span>
+                </div>
+                <h1 class="hero-title animate-on-scroll">
+                    <span class="title-line">Hi, I'm</span>
+                    <span class="title-name gradient-text">Jansen Moral</span>
+                    <span class="title-subtitle">Software Engineer & Problem Solver</span>
+                </h1>
+                <p class="hero-description animate-on-scroll">
+                    A passionate technology enthusiast who transforms complex challenges into elegant solutions through code, innovation, and continuous learning.
+                </p>
+            </div>
+            
+            <!-- Animated Background Elements -->
+            <div class="hero-bg-elements">
+                <div class="floating-dot" style="top: 10%; left: 15%;"></div>
+                <div class="floating-dot" style="top: 60%; left: 80%;"></div>
+                <div class="floating-dot" style="top: 85%; left: 20%;"></div>
+                <div class="floating-line" style="top: 30%; left: 70%;"></div>
+                <div class="floating-line" style="top: 70%; left: 10%;"></div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <div class="container">
+                <div class="profile-grid">
+                    <!-- Left: Image -->
+                    <div class="profile-image-wrapper animate-on-scroll">
+                        <div class="profile-card">
+                            <div class="profile-border-outer"></div>
+                            <div class="profile-border-inner"></div>
+                            <div class="profile-image-container">
+                                <img src="../public/1.JPG" alt="Jansen Moral" class="profile-image">
+                                <div class="profile-overlay"></div>
+                                <!-- Corner Accents -->
+                                <div class="corner-accent corner-tl"></div>
+                                <div class="corner-accent corner-tr"></div>
+                                <div class="corner-accent corner-bl"></div>
+                                <div class="corner-accent corner-br"></div>
+                            </div>
+                            <!-- Floating Particles -->
+                            <div class="profile-particle p1"></div>
+                            <div class="profile-particle p2"></div>
+                            <div class="profile-particle p3"></div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Content -->
+                    <div class="profile-content">
+                        <div class="section-label animate-on-scroll">
+                            <span class="label-line"></span>
+                            <span>About Me</span>
+                        </div>
+                        
+                        <h2 class="section-title animate-on-scroll">
+                            Crafting Digital Solutions with <span class="highlight-text">Innovation</span> & <span class="highlight-text">Purpose</span>
+                        </h2>
+
+                        <div class="content-text">
+                            <p class="animate-on-scroll" style="text-align: justify;">
+                                I'm a <strong>Software Engineer</strong> with a passion for building impactful technology solutions that make a difference. My journey in tech is driven by curiosity, continuous learning, and the desire to solve real-world problems through code.
+                            </p>
+
+                            <p class="animate-on-scroll" style="text-align: justify;">
+                                From developing <strong>AI-powered systems</strong> to creating <strong>user-centric web applications</strong>, I thrive on challenges that push me to innovate and grow. I believe in writing clean, efficient code and designing solutions that not only work but also inspire.
+                            </p>
+
+                            <p class="animate-on-scroll" style="text-align: justify;">
+                                Beyond coding, I'm committed to <strong>sustainable development</strong>, <strong>education technology</strong>, and creating tools that empower communities. I'm constantly exploring emerging technologies and staying ahead of industry trends to deliver cutting-edge solutions.
+                            </p>
+
+                            <p class="animate-on-scroll" style="text-align: justify;">
+                                My approach combines <strong>technical expertise</strong> with <strong>adaptive collaboration</strong>, allowing me to work effectively in diverse teams and deliver projects that exceed expectations. Whether it's full-stack development, UI/UX design, or system architecture, I'm always ready to tackle the next challenge.
+                            </p>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="stats-grid">
+                            <div class="stat-card animate-on-scroll">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Projects Completed</div>
+                                <div class="stat-glow"></div>
+                            </div>
+                            <div class="stat-card animate-on-scroll">
+                                <div class="stat-number">3+</div>
+                                <div class="stat-label">Years Experience</div>
+                                <div class="stat-glow"></div>
+                            </div>
+                            <div class="stat-card animate-on-scroll">
+                                <div class="stat-number">10+</div>
+                                <div class="stat-label">Technologies</div>
+                                <div class="stat-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label animate-on-scroll">
+                        <span class="label-line"></span>
+                        <span>Core Values</span>
+                    </div>
+                    <h2 class="section-title animate-on-scroll">What Drives Me</h2>
+                </div>
+
+                <div class="values-grid">
+                    <div class="value-card animate-on-scroll">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Innovation</h3>
+                        <p>Constantly exploring new technologies and creative solutions to push boundaries and stay ahead of the curve.</p>
+                    </div>
+
+                    <div class="value-card animate-on-scroll">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3>Continuous Learning</h3>
+                        <p>Embracing growth through ongoing education, skill development, and staying current with industry trends.</p>
+                    </div>
+
+                    <div class="value-card animate-on-scroll">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3>Collaboration</h3>
+                        <p>Working effectively with diverse teams to achieve common goals and create meaningful impact together.</p>
+                    </div>
+
+                    <div class="value-card animate-on-scroll">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <h3>Excellence</h3>
+                        <p>Committed to delivering high-quality work with attention to detail and a focus on exceptional results.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content animate-on-scroll">
+                    <h2>Let's Build Something Amazing Together</h2>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                    <div class="cta-buttons">
+                        <a href="../pages/contact.html" class="btn btn-primary">
+                            <span>Get In Touch</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="../pages/portfolio.html" class="btn btn-secondary">
+                            <span>View My Work</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Gradient Overlay -->
+        <div class="footer-gradient"></div>
+        
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Left side - Logo and Name -->
+                <div class="footer-left">
+                    <div class="footer-logo-wrapper">
+                        <img src="../public/shinlogo.png" alt="Xhinvier Logo" class="footer-logo">
+                        <div class="footer-logo-glow"></div>
+                    </div>
+                    <span class="footer-name">Xhinvier</span>
+                </div>
+
+                <!-- Right side - Social Links -->
+                <div class="footer-right">
+                    <a href="https://linkedin.com/in/xhinvier07" target="_blank" rel="noopener noreferrer" class="social-link linkedin" aria-label="LinkedIn">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span class="social-text">LinkedIn</span>
+                        <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                    </a>
+                    
+                    <a href="https://github.com/Xhinvier07" target="_blank" rel="noopener noreferrer" class="social-link github" aria-label="GitHub">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                        </svg>
+                        <span class="social-text">Github</span>
+                        <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                    </a>
+                    
+                    <a href="mailto:jansenmoral@gmail.com" class="social-link mail" aria-label="Email">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <span class="social-text">Mail</span>
+                        <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                    </a>
+                    
+                    <a href="#" class="social-link resume" aria-label="Resume">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <span class="social-text">Resume</span>
+                        <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Animated Background Dots -->
+        <div class="footer-dots">
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+            <div class="dot dot-4"></div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navbar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html>
+

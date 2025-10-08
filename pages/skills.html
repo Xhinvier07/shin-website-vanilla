@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skills & Tech Stack - Xhinvier's Technical Expertise">
+    <meta name="author" content="Jansen Moral">
+    <title>Skills | Xhinvier</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/skills.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../public/shinlogo.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <div class="logo-wrapper">
+                    <a href="../index.html">
+                        <img src="../public/shinlogo.png" alt="Shin Logo" class="logo-image">
+                        <div class="logo-shine"></div>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li class="navbar-item">
+                    <a href="../index.html" class="nav-link">
+                        <span class="text-gradient-hover">HOME</span>
+                        <div class="nav-border"></div>
+                        <div class="nav-particles">
+                            <div class="particle particle-1"></div>
+                            <div class="particle particle-2"></div>
+                            <div class="particle particle-3"></div>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="navbar-item has-dropdown">
+                    <a href="about.html" class="nav-link active">
+                        <span class="text-gradient-hover">ABOUT ME</span>
+                        <svg class="dropdown-arrow" viewBox="0 0 12 8" fill="none">
+                            <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <div class="nav-border"></div>
+                        <div class="nav-particles">
+                            <div class="particle particle-1"></div>
+                            <div class="particle particle-2"></div>
+                            <div class="particle particle-3"></div>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="education.html" class="dropdown-item">Education</a></li>
+                        <li><a href="experience.html" class="dropdown-item">Experience</a></li>
+                        <li><a href="skills.html" class="dropdown-item active">Skills</a></li>
+                    </ul>
+                </li>
+                
+                <li class="navbar-item has-dropdown">
+                    <a href="achievements.html" class="nav-link">
+                        <span class="text-gradient-hover">ACHIEVEMENTS</span>
+                        <svg class="dropdown-arrow" viewBox="0 0 12 8" fill="none">
+                            <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <div class="nav-border"></div>
+                        <div class="nav-particles">
+                            <div class="particle particle-1"></div>
+                            <div class="particle particle-2"></div>
+                            <div class="particle particle-3"></div>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="certifications.html" class="dropdown-item">Certifications & Training</a></li>
+                        <li><a href="advocacy.html" class="dropdown-item">Advocacy</a></li>
+                    </ul>
+                </li>
+                
+                <li class="navbar-item">
+                    <a href="portfolio.html" class="nav-link">
+                        <span class="text-gradient-hover">PORTFOLIO</span>
+                        <div class="nav-border"></div>
+                        <div class="nav-particles">
+                            <div class="particle particle-1"></div>
+                            <div class="particle particle-2"></div>
+                            <div class="particle particle-3"></div>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="navbar-item">
+                    <a href="contact.html" class="nav-link">
+                        <span class="text-gradient-hover">CONTACT</span>
+                        <div class="nav-border"></div>
+                        <div class="nav-particles">
+                            <div class="particle particle-1"></div>
+                            <div class="particle particle-2"></div>
+                            <div class="particle particle-3"></div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <svg class="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content skills-page">
+        <!-- Hero Section -->
+        <section class="skills-hero">
+            <div class="hero-content">
+                <div class="hero-badge animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <span>Technical Arsenal</span>
+                </div>
+                <h1 class="hero-title animate-on-scroll">
+                    <span class="gradient-text-shimmer">Tech Stack</span>
+                </h1>
+                <p class="hero-description animate-on-scroll">
+                    Technologies I use to transform ideas into digital realities. Each tool carefully selected for optimal performance and innovation.
+                </p>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section class="tech-stack-content">
+            <div class="container">
+                <!-- Personal Favorites -->
+                <div class="tech-category animate-on-scroll">
+                    <div class="category-header">
+                        <h2 class="category-title">
+                            <span class="title-icon">⚡</span>
+                            Personal Favorites
+                        </h2>
+                        <p class="category-description">My go-to technologies for building powerful applications</p>
+                    </div>
+                    
+                    <div class="tech-grid">
+                        <div class="tech-card" data-tech="python">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/python2.svg" alt="Python" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">Python</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="vite">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/Vitejs-logo.svg" alt="Vite" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">Vite</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="react">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/react.svg" alt="React" class="tech-icon react-color">
+                            </div>
+                            <h3 class="tech-name">React</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="pytorch">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/pytorch.svg" alt="PyTorch" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">PyTorch</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="opencv">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/opencv.svg" alt="OpenCV" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">OpenCV</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="streamlit">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/streamlit.svg" alt="Streamlit" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">Streamlit</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="flask">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/flask.svg" alt="Flask" class="tech-icon invert">
+                            </div>
+                            <h3 class="tech-name">Flask</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="tensorflow">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/tensorflow.svg" alt="TensorFlow" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">TensorFlow</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming Languages -->
+                <div class="tech-category animate-on-scroll">
+                    <div class="category-header">
+                        <h2 class="category-title">
+                            <span class="title-icon">💻</span>
+                            Programming Languages
+                        </h2>
+                        <p class="category-description">Languages I fluently speak to machines</p>
+                    </div>
+                    
+                    <div class="tech-grid">
+                        <div class="tech-card" data-tech="python">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/python2.svg" alt="Python" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">Python</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="javascript">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/javascript.svg" alt="JavaScript" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">JavaScript</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="java">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/java.svg" alt="Java" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">Java</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="c">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/c.svg" alt="C++" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">C++</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="swift">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/swift.svg" alt="Swift" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">Swift</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="html">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/html.svg" alt="HTML5" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">HTML5</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="css">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/css3.svg" alt="CSS3" class="tech-icon ">
+                            </div>
+                            <h3 class="tech-name">CSS3</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Software & Tools -->
+                <div class="tech-category animate-on-scroll">
+                    <div class="category-header">
+                        <h2 class="category-title">
+                            <span class="title-icon">🛠️</span>
+                            Software & Tools
+                        </h2>
+                        <p class="category-description">Design and productivity tools I master daily</p>
+                    </div>
+                    
+                    <div class="tech-grid">
+                        <div class="tech-card" data-tech="photoshop">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/photoshop.svg" alt="Photoshop" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">Photoshop</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="premiere">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/premiere.svg" alt="Premiere Pro" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">Premiere Pro</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="illustrator">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/illustrator.svg" alt="Illustrator" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">Illustrator</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="lightroom">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/lightroom.svg" alt="Lightroom" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">Lightroom</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="audition">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/audition.svg" alt="Audition" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">Audition</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="figma">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/figma.svg" alt="Figma" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">Figma</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="canva">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/canva.svg" alt="Canva" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">Canva</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card" data-tech="git">
+                            <div class="card-grain"></div>
+                            <div class="card-glow"></div>
+                            <div class="tech-icon-wrapper">
+                                <img src="../public/tech/git.svg" alt="Git" class="tech-icon">
+                            </div>
+                            <h3 class="tech-name">Git</h3>
+                            <div class="tech-bar">
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                                <div class="tech-level-dot active"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-gradient"></div>
+        
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo-wrapper">
+                        <img src="../public/shinlogo.png" alt="Xhinvier Logo" class="footer-logo">
+                        <div class="footer-logo-glow"></div>
+                    </div>
+                    <span class="footer-name">Xhinvier</span>
+                </div>
+
+                <div class="footer-right">
+                    <a href="https://linkedin.com/in/xhinvier07" target="_blank" rel="noopener noreferrer" class="social-link linkedin">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span class="social-text">LinkedIn</span>
+                        <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                    </a>
+                    
+                    <a href="https://github.com/Xhinvier07" target="_blank" rel="noopener noreferrer" class="social-link github">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                        </svg>
+                        <span class="social-text">Github</span>
+                        <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                    </a>
+                    
+                    <a href="mailto:jansenmoral@gmail.com" class="social-link mail">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <span class="social-text">Mail</span>
+                        <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                    </a>
+                    
+                    <a href="#" class="social-link resume">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <span class="social-text">Resume</span>
+                        <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-dots">
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+            <div class="dot dot-4"></div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/skills.js"></script>
+</body>
+</html>
+
