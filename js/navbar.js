@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mobileMenuBtn && navMenu) {
         mobileMenuBtn.addEventListener('click', function() {
             navMenu.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
             
             // Animate icon (optional enhancement)
             const menuIcon = mobileMenuBtn.querySelector('.menu-icon');
@@ -66,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (!isClickInside && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
                 const menuIcon = mobileMenuBtn.querySelector('.menu-icon');
                 menuIcon.style.transform = 'rotate(0deg)';
             }
@@ -76,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', function() {
                 if (window.innerWidth <= 768) {
                     navMenu.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
                     const menuIcon = mobileMenuBtn.querySelector('.menu-icon');
                     menuIcon.style.transform = 'rotate(0deg)';
                 }
@@ -140,6 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Close mobile menu on resize to desktop
             if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
                 const menuIcon = mobileMenuBtn.querySelector('.menu-icon');
                 if (menuIcon) {
                     menuIcon.style.transform = 'rotate(0deg)';

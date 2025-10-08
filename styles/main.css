@@ -324,10 +324,9 @@ body {
     display: none;
     background: none;
     border: none;
-    color: var(--text-primary);
-    padding: 0.5rem;
     cursor: pointer;
-    transition: color var(--transition-fast);
+    padding: 0.5rem;
+    z-index: 1000;
 }
 
 .mobile-menu-btn:hover {
@@ -681,26 +680,45 @@ body {
     .mobile-menu-btn {
         display: block;
     }
-    
+
     .nav-menu {
+        display: none;
         position: fixed;
-        top: var(--navbar-height);
+        top: 70px;
         left: 0;
         right: 0;
+        background: rgba(17, 17, 17, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
         flex-direction: column;
-        background: rgba(0, 0, 0, 0.98);
-        backdrop-filter: blur(12px);
-        padding: 2rem;
-        gap: 1.5rem;
-        transform: translateY(-100%);
-        opacity: 0;
-        transition: all var(--transition-normal);
-        border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+        gap: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
+
     .nav-menu.active {
-        transform: translateY(0);
-        opacity: 1;
+        display: flex;
+    }
+
+    .navbar-item {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        background: transparent;
+        padding-left: 1rem;
+        display: none;
+    }
+
+    .dropdown-menu.show {
+        display: block;
+    }
+
+    .has-dropdown > a {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     
     .footer-content {
