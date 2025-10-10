@@ -2,573 +2,608 @@
    EXPERIENCE PAGE STYLES
    Creative card design with grain texture
    ============================================ */
-   body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: url('../public/grain.jpg');
-    background-repeat: repeat;
-    background-size: 150px 150px;
-    opacity: 0.25;
-    pointer-events: none;
-    z-index: 0;
-  }
-  
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("../public/grain.jpg");
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+
 /* ============================================
    HERO SECTION
    ============================================ */
 .experience-hero {
-    position: relative;
-    min-height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8rem 2rem 4rem;
-    overflow: hidden;
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem 4rem;
+  overflow: hidden;
 }
 
 .hero-content {
-    max-width: 800px;
-    text-align: center;
-    position: relative;
-    z-index: 10;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
 }
 
 .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem 1.5rem;
-    background: rgba(51, 161, 224, 0.1);
-    border: 1px solid rgba(51, 161, 224, 0.3);
-    border-radius: 50px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--accent);
-    margin-bottom: 2rem;
-    opacity: 0;
-    animation: fade-in-up 0.8s ease-out 0.2s forwards;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(51, 161, 224, 0.1);
+  border: 1px solid rgba(51, 161, 224, 0.3);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fade-in-up 0.8s ease-out 0.2s forwards;
 }
 
 .hero-badge svg {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+img {
+  border-radius: 10px;
 }
 
 .hero-title {
-    font-size: clamp(3rem, 8vw, 5rem);
-    font-weight: 900;
-    margin-bottom: 1.5rem;
-    opacity: 0;
-    animation: fade-in-up 0.8s ease-out 0.4s forwards;
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fade-in-up 0.8s ease-out 0.4s forwards;
 }
 
 .gradient-text-shimmer {
-    background: linear-gradient(90deg, #FFF9AF 0%, #33A1E0 25%, #1C6EA4 50%, #33A1E0 75%, #FFF9AF 100%);
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradient-shimmer 8s linear infinite;
-    display: inline-block;
+  background: linear-gradient(
+    90deg,
+    #fff9af 0%,
+    #33a1e0 25%,
+    #1c6ea4 50%,
+    #33a1e0 75%,
+    #fff9af 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shimmer 8s linear infinite;
+  display: inline-block;
 }
 
 @keyframes gradient-shimmer {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 200% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
 }
 
 .hero-description {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    color: var(--text-secondary);
-    line-height: 1.8;
-    max-width: 700px;
-    margin: 0 auto;
-    opacity: 0;
-    animation: fade-in-up 0.8s ease-out 0.6s forwards;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fade-in-up 0.8s ease-out 0.6s forwards;
 }
 
 /* ============================================
    EXPERIENCE CONTENT
    ============================================ */
 .experience-content {
-    padding: 4rem 2rem 6rem;
-    position: relative;
+  padding: 4rem 2rem 6rem;
+  position: relative;
 }
 
 .container {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 /* ============================================
    EXPERIENCE CARDS
    ============================================ */
 .experience-card {
-    position: relative;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 24px;
-    padding: 2.5rem;
-    border: 1px solid rgba(51, 161, 224, 0.2);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(30px);
+  position: relative;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 24px;
+  padding: 2.5rem;
+  border: 1px solid rgba(51, 161, 224, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
 }
 
 .experience-card.revealed {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Grain Texture Overlay */
 .card-grain {
-    position: absolute;
-    inset: 0;
-    background-image: url('../public/grain.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.55;
-    mix-blend-mode: overlay;
-    pointer-events: none;
-    z-index: 1;
+  position: absolute;
+  inset: 0;
+  background-image: url("../public/grain.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.55;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* Card Glow Effect */
 .card-glow {
-    position: absolute;
-    inset: -2px;
-    background: linear-gradient(135deg, transparent, rgba(51, 161, 224, 0.3), transparent);
-    border-radius: 24px;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 0;
-    filter: blur(20px);
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(
+    135deg,
+    transparent,
+    rgba(51, 161, 224, 0.3),
+    transparent
+  );
+  border-radius: 24px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+  filter: blur(20px);
 }
 
 .experience-card:hover .card-glow {
-    opacity: 1;
-    animation: glow-pulse 3s ease-in-out infinite;
+  opacity: 1;
+  animation: glow-pulse 3s ease-in-out infinite;
 }
 
 @keyframes glow-pulse {
-    0%, 100% {
-        opacity: 0.5;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.02);
-    }
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
 }
 
 .experience-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(51, 161, 224, 0.5);
-    box-shadow: 0 20px 60px rgba(51, 161, 224, 0.2);
+  transform: translateY(-8px);
+  border-color: rgba(51, 161, 224, 0.5);
+  box-shadow: 0 20px 60px rgba(51, 161, 224, 0.2);
 }
 
 /* Color Variations */
 .experience-card[data-color="blue"]:hover {
-    border-color: rgba(59, 130, 246, 0.5);
-    box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
 }
 
 .experience-card[data-color="blue"]:hover .card-glow {
-    background: linear-gradient(135deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+  background: linear-gradient(
+    135deg,
+    transparent,
+    rgba(59, 130, 246, 0.3),
+    transparent
+  );
 }
 
 .experience-card[data-color="green"]:hover {
-    border-color: rgba(16, 185, 129, 0.5);
-    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.5);
+  box-shadow: 0 20px 60px rgba(16, 185, 129, 0.2);
 }
 
 .experience-card[data-color="green"]:hover .card-glow {
-    background: linear-gradient(135deg, transparent, rgba(16, 185, 129, 0.3), transparent);
+  background: linear-gradient(
+    135deg,
+    transparent,
+    rgba(16, 185, 129, 0.3),
+    transparent
+  );
 }
 
 .experience-card[data-color="purple"]:hover {
-    border-color: rgba(168, 85, 247, 0.5);
-    box-shadow: 0 20px 60px rgba(168, 85, 247, 0.2);
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow: 0 20px 60px rgba(168, 85, 247, 0.2);
 }
 
 .experience-card[data-color="purple"]:hover .card-glow {
-    background: linear-gradient(135deg, transparent, rgba(168, 85, 247, 0.3), transparent);
+  background: linear-gradient(
+    135deg,
+    transparent,
+    rgba(168, 85, 247, 0.3),
+    transparent
+  );
 }
 
 /* ============================================
    CARD HEADER
    ============================================ */
 .card-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative;
-    z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 2;
 }
 
 .company-badge {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .badge-logo {
-    width: 80px;
-    height: 80px;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.05);
-    border: 2px solid rgba(51, 161, 224, 0.3);
-    transition: all 0.4s ease;
-    overflow: hidden;
-    padding: 0.5rem;
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(51, 161, 224, 0.3);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  padding: 0.5rem;
 }
 
 .company-logo {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: all 0.4s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.4s ease;
 }
 
 .company-logo-text {
-    font-size: 1.75rem;
-    font-weight: 900;
-    color: var(--text-primary);
-    font-family: var(--font-primary);
-    transition: all 0.4s ease;
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  transition: all 0.4s ease;
 }
 
 .badge-logo.blue {
-    border-color: rgba(59, 130, 246, 0.4);
-    background: rgba(59, 130, 246, 0.05);
+  border-color: rgba(59, 130, 246, 0.4);
+  background: rgba(59, 130, 246, 0.05);
 }
 
 .badge-logo.green {
-    border-color: rgba(16, 185, 129, 0.4);
-    background: rgba(16, 185, 129, 0.05);
+  border-color: rgba(16, 185, 129, 0.4);
+  background: rgba(16, 185, 129, 0.05);
 }
 
 .badge-logo.purple {
-    border-color: rgba(168, 85, 247, 0.4);
-    background: rgba(168, 85, 247, 0.05);
+  border-color: rgba(168, 85, 247, 0.4);
+  background: rgba(168, 85, 247, 0.05);
 }
 
 .experience-card:hover .badge-logo {
-    transform: scale(1.05);
-    box-shadow: 0 8px 24px rgba(51, 161, 224, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(51, 161, 224, 0.2);
 }
 
 .experience-card:hover .company-logo {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .badge-type {
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--accent);
-    letter-spacing: 0.5px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--accent);
+  letter-spacing: 0.5px;
 }
 
 .position-info {
-    flex: 1;
+  flex: 1;
 }
 
 .position-title {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
-    font-family: var(--font-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-primary);
 }
 
 .company-name {
-    font-size: 1.125rem;
-    color: var(--accent);
-    font-weight: 600;
-    margin-bottom: 0.25rem;
+  font-size: 1.125rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .duration {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 500;
 }
 
 /* ============================================
    CARD BODY
    ============================================ */
 .card-body {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .description {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-    font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-body);
 }
 
 .responsibilities {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .responsibilities h4 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
 }
 
 .responsibilities ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .responsibilities li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  transition: all 0.3s ease;
 }
 
 .responsibilities li svg {
-    width: 18px;
-    height: 18px;
-    color: var(--accent);
-    flex-shrink: 0;
-    margin-top: 0.125rem;
+  width: 18px;
+  height: 18px;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 0.125rem;
 }
 
 .responsibilities li:hover {
-    color: var(--text-primary);
-    transform: translateX(5px);
+  color: var(--text-primary);
+  transform: translateX(5px);
 }
 
 /* ============================================
    SKILLS TAGS
    ============================================ */
 .skills-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .skill-tag {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: rgba(51, 161, 224, 0.1);
-    border: 1px solid rgba(51, 161, 224, 0.3);
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--accent);
-    transition: all 0.3s ease;
-    cursor: default;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(51, 161, 224, 0.1);
+  border: 1px solid rgba(51, 161, 224, 0.3);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent);
+  transition: all 0.3s ease;
+  cursor: default;
 }
 
 .skill-tag:hover {
-    background: rgba(51, 161, 224, 0.2);
-    border-color: rgba(51, 161, 224, 0.5);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(51, 161, 224, 0.2);
+  background: rgba(51, 161, 224, 0.2);
+  border-color: rgba(51, 161, 224, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(51, 161, 224, 0.2);
 }
 
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
 @media (max-width: 1024px) {
-    .experience-hero {
-        padding: 7rem 2rem 3rem;
-    }
-    
-    .experience-content {
-        padding: 4rem 2rem 5rem;
-    }
-    
-    .container {
-        gap: 2.5rem;
-    }
-    
-    .experience-card {
-        padding: 2.5rem 2rem;
-    }
+  .experience-hero {
+    padding: 7rem 2rem 3rem;
+  }
+
+  .experience-content {
+    padding: 4rem 2rem 5rem;
+  }
+
+  .container {
+    gap: 2.5rem;
+  }
+
+  .experience-card {
+    padding: 2.5rem 2rem;
+  }
 }
 
 @media (max-width: 768px) {
-    .experience-hero {
-        padding: 6rem 1.5rem 3rem;
-    }
-    
-    .experience-content {
-        padding: 3rem 1.5rem 4rem;
-    }
-    
-    .container {
-        gap: 2rem;
-    }
-    
-    .experience-card {
-        padding: 2rem 1.5rem;
-    }
-    
-    .card-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-    
-    .company-badge {
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    .badge-logo {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .position-title {
-        font-size: 1.5rem;
-    }
-    
-    .company-name {
-        font-size: 1rem;
-    }
-    
-    .skills-tags {
-        gap: 0.5rem;
-    }
-    
-    .skill-tag {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.8rem;
-    }
-    
-    .floating-elements {
-        display: none;
-    }
+  .experience-hero {
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  .experience-content {
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .container {
+    gap: 2rem;
+  }
+
+  .experience-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .company-badge {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .badge-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .position-title {
+    font-size: 1.5rem;
+  }
+
+  .company-name {
+    font-size: 1rem;
+  }
+
+  .skills-tags {
+    gap: 0.5rem;
+  }
+
+  .skill-tag {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .floating-elements {
+    display: none;
+  }
 }
 
 @media (max-width: 640px) {
-    .experience-hero {
-        padding: 5rem 1rem 2rem;
-    }
-    
-    .experience-content {
-        padding: 2.5rem 1rem 3rem;
-    }
-    
-    .container {
-        gap: 1.5rem;
-    }
-    
-    .experience-card {
-        padding: 1.5rem;
-    }
-    
-    .card-header {
-        gap: 0.75rem;
-    }
-    
-    .badge-logo {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .position-title {
-        font-size: 1.25rem;
-    }
-    
-    .company-name {
-        font-size: 0.9rem;
-    }
-    
-    .description {
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
-    
-    .responsibilities {
-        gap: 0.75rem;
-    }
-    
-    .responsibilities li {
-        font-size: 0.9rem;
-        line-height: 1.5;
-    }
-    
-    .skills-tags {
-        gap: 0.4rem;
-    }
-    
-    .skill-tag {
-        padding: 0.3rem 0.6rem;
-        font-size: 0.75rem;
-    }
+  .experience-hero {
+    padding: 5rem 1rem 2rem;
+  }
+
+  .experience-content {
+    padding: 2.5rem 1rem 3rem;
+  }
+
+  .container {
+    gap: 1.5rem;
+  }
+
+  .experience-card {
+    padding: 1.5rem;
+  }
+
+  .card-header {
+    gap: 0.75rem;
+  }
+
+  .badge-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .position-title {
+    font-size: 1.25rem;
+  }
+
+  .company-name {
+    font-size: 0.9rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .responsibilities {
+    gap: 0.75rem;
+  }
+
+  .responsibilities li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .skills-tags {
+    gap: 0.4rem;
+  }
+
+  .skill-tag {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .experience-hero {
-        padding: 4rem 0.75rem 1.5rem;
-    }
-    
-    .experience-content {
-        padding: 2rem 0.75rem 2.5rem;
-    }
-    
-    .container {
-        gap: 1rem;
-    }
-    
-    .experience-card {
-        padding: 1.25rem;
-    }
-    
-    .badge-logo {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .position-title {
-        font-size: 1.125rem;
-    }
-    
-    .company-name {
-        font-size: 0.85rem;
-    }
-    
-    .description {
-        font-size: 0.9rem;
-    }
-    
-    .responsibilities li {
-        font-size: 0.85rem;
-    }
-    
-    .skill-tag {
-        padding: 0.25rem 0.5rem;
-        font-size: 0.7rem;
-    }
-}
+  .experience-hero {
+    padding: 4rem 0.75rem 1.5rem;
+  }
 
+  .experience-content {
+    padding: 2rem 0.75rem 2.5rem;
+  }
+
+  .container {
+    gap: 1rem;
+  }
+
+  .experience-card {
+    padding: 1.25rem;
+  }
+
+  .badge-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .position-title {
+    font-size: 1.125rem;
+  }
+
+  .company-name {
+    font-size: 0.85rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .responsibilities li {
+    font-size: 0.85rem;
+  }
+
+  .skill-tag {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+  }
+}
